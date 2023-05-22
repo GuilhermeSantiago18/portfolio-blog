@@ -1,3 +1,4 @@
+import { GlobalProvider } from "@/context/global/global"
 import { ReactNode } from "react"
 
 
@@ -13,8 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <h1>BLOGSPOT</h1>
-      <body>{children}</body>
+      <body>
+        <GlobalProvider>
+        {children}
+        </GlobalProvider>
+        </body>
     </html>
   )
 }
