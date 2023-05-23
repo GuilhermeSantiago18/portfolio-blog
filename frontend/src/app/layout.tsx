@@ -1,4 +1,3 @@
-import { GlobalProvider } from "@/context/global/global";
 import { ReactNode } from "react";
 import './global.css';
 import Providers from './Providers';
@@ -15,12 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-        <Providers>
         <body >
+        <Providers>
           <NavBar />
         {children}
-        </body>
         </Providers>
+        </body>
     </html>
   )
 }
