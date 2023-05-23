@@ -2,97 +2,124 @@
 
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
-import DarkModeBtn from './DarkModeBtn';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
-import Spinner from './Spinner';
-import { MenuIcon } from 'lucide-react'
-
-type Props = {
-  to: string
-  children: React.ReactNode
-}
-
-function NavLink({to, children}: Props) {
-  return <a href={to} className={`mx-4`}>
-      {children}
-  </a>
-}
-
-type mProps = {
-  open: boolean
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-function MobileNav({open, setOpen}: mProps) {
-  return (
-      <div className={`absolute top-0 left-0 h-screen w-screen  transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-          <div className="flex flex-col ml-4">
-              <a className="text-xl font-medium my-4" href="/about" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                  About
-              </a>
-              <a className="text-xl font-normal my-4" href="/contact" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                  Contact
-              </a>
-          </div>  
-      </div>
-  )
-}
-
-
-const links = [{
-  title: 'Home',
-  to: '/'
-},
-{
-  title: 'Blog',
-  to: '/blog'
-}
-]
+import DarkModeBtn from "./DarkModeBtn";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import Spinner from "./Spinner";
+import { MenuIcon } from "lucide-react";
+import Head from "next/head";
 
 export default function NavBar() {
-  const [mounted, setMounted] = useState(false)
-	const { systemTheme, theme } = useTheme()
-  const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme } = useTheme();
+  const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-	useEffect(() => {
-		setMounted(true)
-	}, [])
+  if (!mounted) {
+    return <Spinner size={6} />;
+  }
 
-	if (!mounted) {
-		return <Spinner size={6} />
-	}
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
-	const currentTheme = theme === "system" ? systemTheme : theme
+  const handleClickOpenMenu = () => {
+    setOpen(!open);
+  };
 
-  return (
-      <header className='relative flex w-full items-center justify-between py-2 lg:px-3 sm:px-1'>
-        <Image src={ currentTheme === 'dark' ? 'potirawhite.svg' : '/potira.svg'} alt="logo" width={170} height={70} />
-
-        <nav className="flex filter drop-shadow-md px-4 py-4 h-20 items-center">
-            <MobileNav open={open} setOpen={setOpen}/>
-            <div className="w-9/12 flex justify-end items-center">
-
+    return (
+      <div>
+        <nav className="w-full bg-th-primary">
+          <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <div>
+              <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                <Link href="/">
+                  <Image src={currentTheme === "light" ? "/potira.svg" : "/potirawhite.svg"} alt={"Potira"} width={170} height={70} />
+                </Link>
+                <div className="md:hidden sm:visible">
+                    <DarkModeBtn />
+                    </div>
                 <div className="md:hidden">
-                    {/* hamburger button */}
-                   <button type='button' onClick={() => setOpen(true)}>
-                    <MenuIcon />
-                   </button>
+                  <button
+                    className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                    onClick={() => setOpen(!open)}
+                  >
+                    {open ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 text-white"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
+                      </svg>
+                    )}
+                  </button>
                 </div>
-
-                <div className="hidden md:flex">
-                    <NavLink to="/contact">
-                        CONTACT
-                    </NavLink>
-                    <NavLink to="/about">
-                        ABOUT
-                    </NavLink>
-                </div>
+              </div>
             </div>
-        </nav>
-    
-        {/* <DarkModeBtn /> */}
-        </header>
-  );
+            <div>
+              <div
+                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                  open ? 'block' : 'hidden'
+                }`}
+              >
+                <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                  {!open && <li>
+                    <DarkModeBtn />
+                  </li>
 }
+                  <li className="bg-th-primary">
+                    <Link href="/home">
+                      Home
+                    </Link>
+                  </li>
+                  <li className="bg-th-primary">
+                    <Link href="/blogs">
+                      Blogs
+                    </Link>
+                  </li>
+                  <li className="bg-th-primary">
+                    <Link href="/about">
+                      About US
+                    </Link>
+                  </li>
+                  <li className="bg-th-primary">
+                    <Link href="/contact">
+                    Contact US
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+        </nav>
+        <div className="flex justify-center items-center mt-8">
+          <h1 className="text-2xl font-bold text-purple-500">
+            Create Responsive Navbar Menu in Next js with Tailwind CSS
+          </h1>
+        </div>
+      </div>
+    );
+  }
