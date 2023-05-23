@@ -1,5 +1,6 @@
-import { GlobalProvider } from "@/context/global/global"
-import { ReactNode } from "react"
+import { GlobalProvider } from "@/context/global/global";
+import { ReactNode } from "react";
+import './global.css';
 
 
 export const metadata = {

@@ -14,9 +14,10 @@ export default function Home() {
     <>
    
       <Link href="/blog">
-        <h2>Home</h2>
+        <div className="container"></div>
       </Link>
-      <button onClick={handleClick}>Boolean</button>
+      <h2 className="bg-red-600">Home</h2>
+      <button onClick={handleClick} className="container">Boolean</button>
       {disabled ? <p>Context Ok</p> : null}
     </>
   );
