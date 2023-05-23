@@ -20,14 +20,14 @@ const DarkModeBtn = () => {
 	return (
 		<div>
 			{currentTheme === "dark" ? (
-				<SunIcon
+				<MoonIcon
 					className="h-6 w-6 cursor-pointer"
 					onClick={() => {
 						setTheme("light")
 					}}
 				/>
 			) : (
-				<MoonIcon
+				<SunIcon
 					className="h-6 w-6 cursor-pointer"
 					onClick={() => {
 						setTheme("dark")

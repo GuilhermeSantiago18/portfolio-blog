@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { GlobalProvider } from '@/context/global/global'
 import { ThemeProvider } from "next-themes"
 
