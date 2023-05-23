@@ -13,8 +13,8 @@ export default function RootLayout({
   children: ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-        <body >
+    <html suppressHydrationWarning lang="pt-BR">
+        <body>
         <Providers>
           <NavBar />
         {children}

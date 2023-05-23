@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { MoonIcon, SunIcon } from 'lucide-react'
+import Spinner from './Spinner'
 
 const DarkModeBtn = () => {
 	const [mounted, setMounted] = useState(false)
@@ -12,7 +13,7 @@ const DarkModeBtn = () => {
 	}, [])
 
 	if (!mounted) {
-		return null
+		return <Spinner size={6} />
 	}
 
 	const currentTheme = theme === "system" ? systemTheme : theme

@@ -1,10 +1,10 @@
 import Link from "next/link";
+import Spinner from './components/Spinner';
 
 export default function Home() {
   return (
-  
-    <Link href="/home">
-      <h1 >Hello World</h1>
-   </Link>
+    <div className='container'>
+    <h3>Home</h3>
+    </div>
   )
 }
