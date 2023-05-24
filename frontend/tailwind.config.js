@@ -1,9 +1,20 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  purge: ['./src/app/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false,
+  color: {
+    yellow: '#997B54',
+  },
+  theme: {
+    extend: {
+      colors: {
+        'th-background': 'var(--background)',
+        'th-primary': 'var(--primary)',
+        'th-secondary': 'var(--secondary)',
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
   plugins: [],
-}
+};
