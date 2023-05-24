@@ -12,6 +12,7 @@ module.exports = {
         'th-background': 'var(--background)',
         'th-primary': 'var(--primary)',
         'th-secondary': 'var(--secondary)',
+        whatsgreen: "#2AD46A"
       },
     },
   },

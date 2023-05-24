@@ -11,6 +11,7 @@ export default function Depoiments() {
   const [comments, setComments] = useState<Depoiment[]>([]);
   const [newComment, setNewComment] = useState('');
   const [user, setUser] = useState('');
+  const [disableCommends, setDisableCommends] = useState(false)
 
   const addComment = () => {
     if (newComment.trim() !== '') {
@@ -19,13 +20,14 @@ export default function Depoiments() {
         user: user,
         content: newComment,
       };
+      setDisableCommends(true)
       setComments([...comments, newDepoiment]);
       setNewComment('');
+      
     }
   };
-
   return (
-    <>
+    <div>
       <div className="flex flex-wrap justify-center mt-4">
         {comments.map((comment, index) => (
           <div
@@ -41,6 +43,7 @@ export default function Depoiments() {
           </div>
         ))}
       </div>
+    {disableCommends ? 
       <div className="flex justify-center">
         <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2 px-4">
           <label htmlFor="comment-input" className="block mb-2 text-sm font-medium">
@@ -62,13 +65,13 @@ export default function Depoiments() {
             className="block w-3/5 p-4 bg-white rounded-md text-black mt-2"
           />
         </div>
-      </div>
-
+      </div> : null
+      }
       <div className="flex justify-center mt-2 px-4">
-        <button onClick={addComment} className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2 bg-th-primary text-white rounded-md">
+        <button onClick={addComment} className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/6 bg-th-primary text-white mr-10 rounded-md">
           Adicionar Recomendação
         </button>
       </div>
-    </>
+    </div>
   );
 }
