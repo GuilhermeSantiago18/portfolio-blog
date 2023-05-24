@@ -11,12 +11,14 @@ body {
   --background: #dadfe2;
   --primary: #997b54;
   --secondary: #244952;
+  --text-color: #000000;
 }
 
 [data-theme='dark'] {
   --background: #244952;
   --primary: #997b54;
   --secondary: #dadfe2;
+  --text-color: #ffffff;
 }
 
 @keyframes fade-in {

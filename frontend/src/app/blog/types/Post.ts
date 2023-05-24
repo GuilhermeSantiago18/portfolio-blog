@@ -4,4 +4,5 @@ export type PostType = {
   description: string;
   content?: string;
   image: string;
+  category?: string;
 };

@@ -38,7 +38,7 @@ const featuredPosts = [{
 
 export default function Blog() {
   return (
-    <div className="max-w-screen-lg mx-auto">
+    <div className="max-w-screen-xl mx-auto">
         <BlogNav />
         <main className="mt-12">
           <FeaturedPosts />

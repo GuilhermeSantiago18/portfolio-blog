@@ -9,6 +9,7 @@
   }
 },
   "extends": [
+    "eslint:recommended",
     "next",
     "next/core-web-vitals",
     "plugin:react/recommended",

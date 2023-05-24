@@ -7,7 +7,6 @@ type Props = {
 };
 
 export default function NavLink({ name, to }: Props) {
-  console.log(to)
   return (
     <li className="text-th-primary text-base md:text-xl font-bold md:font-medium">
       {to.startsWith("/") ? (
