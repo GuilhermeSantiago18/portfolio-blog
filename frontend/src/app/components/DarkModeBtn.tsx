@@ -21,19 +21,26 @@ const DarkModeBtn = () => {
 	return (
 		<div>
 			{currentTheme === "dark" ? (
-				<MoonIcon
-					className="h-6 w-6 cursor-pointer"
-					onClick={() => {
+				<button className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'	onClick={() => {
 						setTheme("light")
-					}}
+					}}>
+				<MoonIcon
+					className="h-6 w-6 cursor-pointer text-th-primary"
+				
 				/>
+				</button>
 			) : (
+				<button className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'	onClick={() => {
+					setTheme("dark")
+				}}>
 				<SunIcon
-					className="h-6 w-6 cursor-pointer  text-yellow-800"
+					className="h-6 w-6 cursor-pointer text-th-primary"
 					onClick={() => {
 						setTheme("dark")
 					}}
+
 				/>
+				</button>
 			)}
 		</div>
 	)

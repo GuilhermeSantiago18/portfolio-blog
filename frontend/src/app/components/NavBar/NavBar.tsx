@@ -47,10 +47,10 @@ export default function NavBar() {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
     return (
-        <header className="w-full bg-th-primary justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-            <section className="flex items-center justify-between py-3 md:py-5 w-full">
+        <header className="w-full bg-th-secondary justify-between px-4 mx-auto">
+            <section className="flex items-center justify-between py-2  w-full">
               <Link href="/">
-                <Image src={currentTheme === "light" ? "/potira.svg" : "/potirawhite.svg"} alt={"Potira"} width={170} height={70} />
+                <Image src={currentTheme === "dark" ? "/potira.svg" : "/potirawhite.svg"} alt={"Potira"} width={170} height={70} />
               </Link>
               <NavMenu pages={pages} />
               <article className='flex items-center'>

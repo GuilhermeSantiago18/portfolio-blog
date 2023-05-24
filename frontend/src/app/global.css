@@ -8,17 +8,16 @@ body {
 }
 
 :root {
-  --background: #DADFE2;
-  --primary: #997B54
-  --secondary: #244952 
+  --background: #dadfe2;
+  --primary: #997b54;
+  --secondary: #244952;
 }
 
 [data-theme='dark'] {
   --background: #244952;
-  --primary: #997B54
-  --secondary: #DADFE2
+  --primary: #997b54;
+  --secondary: #dadfe2;
 }
-
 
 @keyframes fade-in {
   0% {

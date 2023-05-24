@@ -43,7 +43,7 @@ const Dropdown = ({pages}: Props) => {
               ref={popoverDropdownRef}
               className={
                 (dropdownPopoverShow ? "block " : "hidden ") +
-                " space-y-3 z-50 py-2 list-none mt-1 fade-in"
+                "bg-th-secondary p-4 space-y-3 z-50 py-2 list-none mt-1 fade-in rounded border-2 border-th-primary"
               }
             >
               {pages.map(({name, to}) => <NavLink key={name} name={name} to={to} />)}

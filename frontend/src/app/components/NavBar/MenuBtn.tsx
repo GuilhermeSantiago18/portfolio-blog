@@ -13,7 +13,7 @@ export default function MenuBtn({open, handleOpenMenu, passRef}:Props) {
     className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border md:hidden"
     onClick={handleOpenMenu}
   >
-    {open ? <XIcon className='text-yellow-800' />  : <MenuIcon className='text-yellow-800' /> }
+    {open ? <XIcon className='text-th-primary' />  : <MenuIcon className='text-th-primary' /> }
   </button>
   )
 }

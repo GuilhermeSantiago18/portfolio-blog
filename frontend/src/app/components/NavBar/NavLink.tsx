@@ -7,7 +7,7 @@ type Props = {
 
 export default function NavLink({name,to}: Props) {
   return (
-    <li className="bg-th-primary">
+    <li className="text-th-primary text-base md:text-xl font-bold md:font-medium">
     <Link href={to}>
       {name}
     </Link>
