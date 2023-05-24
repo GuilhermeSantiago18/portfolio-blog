@@ -31,7 +31,7 @@ export default function Depoiments() {
           <div
             key={comment.id}
             className={`w-full sm:w-1/2 px-4 ${
-              index % 2 === 0 ? 'lg:w-1/2' : 'lg:w-1/2 lg:pl-4'
+              index % 2 === 0 ? 'lg:w-2/5' : 'lg:w-2/5 lg:pl-4'
             } mb-4`}
           >
             <div className="p-4 bg-th-background border-2 border-th-primary rounded">
@@ -50,17 +50,16 @@ export default function Depoiments() {
             type="text"
             value={user}
             onChange={(e) => setUser(e.target.value)}
-            id="comment-input"
             placeholder="Digite seu nome"
-            className="block p-4 bg-white rounded-md text-black"
+            className="block p-4 bg-white rounded-md text-black w-3/5"
           />
           <input
-            type="text"
+            type="textarea"
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             id="comment-input"
             placeholder="Escreva sua recomendação"
-            className="block w-full p-4 bg-white rounded-md text-black mt-2"
+            className="block w-3/5 p-4 bg-white rounded-md text-black mt-2"
           />
         </div>
       </div>
