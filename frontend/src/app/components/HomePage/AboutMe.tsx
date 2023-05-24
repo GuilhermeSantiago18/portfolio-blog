@@ -3,18 +3,17 @@ import React from 'react';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="flex items-center">
-      <div className="mr-4">
+    <div className="flex flex-wrap items-start justify-center">
+      <div className="md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4">
         <Image
-          src={"/potiraAbout.jpg"}
+          src="/potiraAbout.jpg"
           alt="Dra. Potira"
-          className=""
-          width={1500}
-          height={1500}
+          width={1000}
+          height={1000}
         />
       </div>
-      <div>
-        <h2 className="text-2xl font-bold mb-2">Dra. Potira</h2>
+      <div className="md:w-1/2 lg:w-1/2 xl:w-1/2 mt-28 px-4">
+        <h2 className="text-2xl font-bold mb-4">Dra. Potira</h2>
         <p>
           Dra. Potira é uma renomada endocrinologista formada na UFRN. Ela possui vasta experiência e conhecimento na área de endocrinologia, com ênfase em tratamento de distúrbios hormonais e doenças da tireoide.
         </p>
