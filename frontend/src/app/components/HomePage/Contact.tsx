@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Contato: React.FC = () => {
@@ -13,7 +15,7 @@ const Contato: React.FC = () => {
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-4">
             <h3 className="text-xl font-semibold mb-2">Email</h3>
-            <p className="text-lg">contato@example.com</p>
+            <p className="text-lg">potira@gmail.com</p>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-4">
             <h3 className="text-xl font-semibold mb-2">Endereço</h3>
@@ -24,30 +26,27 @@ const Contato: React.FC = () => {
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-4">
             <h3 className="text-xl font-semibold mb-2">Redes Sociais</h3>
             <div className="flex space-x-4">
-              <a
+            <Link
                 href="https://www.facebook.com/exemplo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg"
               >
-                Facebook
-              </a>
-              <a
-                href="https://www.instagram.com/exemplo"
+                <Image src={'/socialIcons/facebook.svg'} width={30} height={30} alt="Facebook"/>
+              </Link>
+              <Link
+                href="https://www.facebook.com/exemplo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg"
               >
-                Instagram
-              </a>
-              <a
-                href="https://www.twitter.com/exemplo"
+                <Image src={'/socialIcons/instagram.svg'} width={30} height={30} alt="Instagram"/>
+              </Link>
+              <Link
+                href="https://www.facebook.com/exemplo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg"
               >
-                Twitter
-              </a>
+                <Image src={'/socialIcons/twitter.svg'} width={30} height={30} alt="Twitter"/>
+              </Link>
             </div>
           </div>
         </div>
