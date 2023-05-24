@@ -13,10 +13,12 @@ const pages = [
   {
     name: "Home",
     to: "/",
+    offseat: 0,
   },
   {
     name: "Blog",
     to: "/blog",
+    offseat: 0,
   },
   {
     name: "About",
@@ -26,7 +28,7 @@ const pages = [
   {
     name: "Contact",
     to: "contactSection",
-    offseat: 1000
+    offseat: 0
   },
 ]
 
