@@ -10,9 +10,10 @@ module.exports = {
         'th-background': 'var(--background)',
         'th-primary': 'var(--primary)',
         'th-secondary': 'var(--secondary)',
-        'th-text-color': 'var(--text-color)'
-      }
-    }
+        'th-text-color': 'var(--text-color)',
+         whatsgreen: "#2AD46A"
+      },
+    },
   },
   variants: {
     extend: {}

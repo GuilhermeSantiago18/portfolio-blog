@@ -21,10 +21,12 @@ const pages = [
   {
     name: "About",
     to: "aboutSection",
+    offseat: 0,
   },
   {
     name: "Contact",
     to: "contactSection",
+    offseat: 1000
   },
 ]
 
