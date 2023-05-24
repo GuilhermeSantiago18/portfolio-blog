@@ -68,7 +68,7 @@ export default function Depoiments() {
       </div> : null
       }
       <div className="flex justify-center mt-2 px-4">
-        <button onClick={addComment} className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/6 bg-th-primary text-white mr-10 rounded-md">
+        <button onClick={addComment} className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/6 bg-th-secondary text-th-background mr-10 rounded-md">
           Adicionar Recomendação
         </button>
       </div>

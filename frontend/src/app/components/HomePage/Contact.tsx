@@ -4,7 +4,7 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <section className="bg-th-secondary text-th-primary py-8 mt-10">
+    <section className="bg-th-secondary text-th-background py-8 mt-10">
       <div id="contactSection" className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4">Entre em contato</h2>
         <p className="text-lg mb-6">Agende sua consulta, entre em contato conosco:</p>
