@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { PostType } from '../../types/Post';
 import Post from './Post';
 
@@ -18,7 +17,7 @@ export default function GenericSection({sectionName, posts}: Props) {
      </a>
    </div>
     <div className="block space-x-0 lg:flex lg:space-x-6">
-      {posts.map((post) => ( <Post post={post} />))}
+      {posts.map((post) => ( <Post key={post.id} post={post} />))}
     </div>
    </div>
   )

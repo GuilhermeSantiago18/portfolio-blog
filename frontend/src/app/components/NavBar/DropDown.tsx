@@ -15,7 +15,7 @@ const Dropdown = ({pages}: Props) => {
   const popoverDropdownRef = React.useRef<HTMLDivElement>(null);
 
   const openDropdownPopover = () => {
-    
+
     if(btnDropdownRef?.current && popoverDropdownRef?.current){
       createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
         placement: "bottom-start"
@@ -29,9 +29,9 @@ const Dropdown = ({pages}: Props) => {
   return (
       <div className="flex flex-wrap md:hidden">
         <div className="w-full sm:w-6/12 md:w-4/12 px-4">
-            
-            <MenuBtn 
-              open={dropdownPopoverShow}               
+
+            <MenuBtn
+              open={dropdownPopoverShow}
               passRef={btnDropdownRef}
               handleOpenMenu={() => {
                 dropdownPopoverShow

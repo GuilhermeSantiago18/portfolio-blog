@@ -1,9 +1,10 @@
 import { MenuIcon, XIcon } from 'lucide-react';
+import { RefObject } from 'react';
 
 type Props = {
   open: boolean;
   handleOpenMenu: () => void;
-  passRef: any;
+  passRef: RefObject<HTMLButtonElement> | RefObject<HTMLButtonElement>;
 }
 
 export default function MenuBtn({open, handleOpenMenu, passRef}:Props) {

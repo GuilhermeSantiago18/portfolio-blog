@@ -14,7 +14,7 @@ type AppContextProviderProps = {
 
 const GlobalContext = createContext<GlobalContextData>({
     disabled: false,
-    setDisabled: () => {},
+    setDisabled: () => null,
 });
 
 const GlobalProvider: React.FC<AppContextProviderProps> = ({ children }) => {

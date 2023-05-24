@@ -7,6 +7,8 @@ export default function Subscribe() {
       <div className="px-4 py-2">
       <p className='text-red-500'>Função sugerida, não inclusa no pacote inicial.</p>
 
+
+
         <h3 className="text-3xl text-gray-800 font-bold">Subscribe to newsletter</h3>
         <p className="text-xl text-gray-700">We sent latest news and posts once in every week, fresh from the oven</p>
         <form className="mt-4 mb-10">

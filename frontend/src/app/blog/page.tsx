@@ -1,9 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
-import { BlogNav } from './components/BlogNav'
-import { FeaturedPosts } from './components/FeaturedPosts'
-import { Subscribe } from './components/Subscribe'
-import GenericSection from './components/GenericSection/GenericSection'
+import { BlogNav, FeaturedPosts, GenericSection, Subscribe } from './components'
 
 const recentPosts = [{
   id: 1,
@@ -40,7 +36,6 @@ const featuredPosts = [{
   image: '/mockblog.jpg'
 }]
 
-
 export default function Blog() {
   return (
     <div className="max-w-screen-lg mx-auto">
@@ -51,6 +46,6 @@ export default function Blog() {
           <Subscribe />
           <GenericSection sectionName='Mais vistos' posts={featuredPosts} />
         </main>
-      </div> 
+      </div>
   )
 }

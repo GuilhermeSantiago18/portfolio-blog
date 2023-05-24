@@ -11,7 +11,7 @@ export default function BlogNav() {
     <nav className="flex items-center justify-between py-2">
     <ul className="hidden md:inline-flex items-center">
       {categories.map(({name}) => (
-        <CategoryLink content={name} />
+        <CategoryLink key={name} content={name} />
       ))}
     </ul>
     </nav>

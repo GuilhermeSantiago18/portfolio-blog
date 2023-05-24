@@ -6,9 +6,6 @@ import DarkModeBtn from "../DarkModeBtn";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Spinner from "../Spinner";
-import { MenuIcon, XIcon } from "lucide-react";
-import NavLink from './NavLink';
-import MenuBtn from './MenuBtn';
 import NavMenu from './NavMenu';
 import Dropdown from './DropDown';
 
