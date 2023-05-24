@@ -1,6 +1,9 @@
 module.exports = {
   purge: ['./src/app/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
+  color: {
+    yellow: '#997B54',
+  },
   theme: {
     extend: {
       colors: {

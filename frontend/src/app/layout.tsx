@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import './global.css';
 import Providers from './Providers';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 
 export const metadata = {
   title: 'Dra. Potira Azevedo',

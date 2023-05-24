@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Spinner from './components/Spinner';
+import Dropdown from './components/NavBar/DropDown';
 
 export default function Home() {
   return (

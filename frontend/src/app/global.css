@@ -1,11 +1,10 @@
-/*globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   background-color: var(--background);
-  color: var(--primary-dark);
 }
 
 :root {
@@ -20,8 +19,16 @@ body {
   --secondary: #DADFE2
 }
 
-[data-theme='light'] {
-  --background: #DADFE2;
-  --primary: #997B54
-  --secondary: #244952
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.5s;
 }

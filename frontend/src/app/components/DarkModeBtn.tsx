@@ -29,7 +29,7 @@ const DarkModeBtn = () => {
 				/>
 			) : (
 				<SunIcon
-					className="h-6 w-6 cursor-pointer"
+					className="h-6 w-6 cursor-pointer  text-yellow-800"
 					onClick={() => {
 						setTheme("dark")
 					}}
