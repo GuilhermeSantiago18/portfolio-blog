@@ -6,7 +6,7 @@ import NavLink from './NavLink';
 
 
 type Props = {
-  pages: {name: string, to: string}[]
+  pages: {name: string, to: string, offseat: number}[]
 }
 
 const Dropdown = ({pages}: Props) => {
@@ -29,7 +29,6 @@ const Dropdown = ({pages}: Props) => {
   return (
       <div className="flex flex-wrap md:hidden">
         <div className="w-full sm:w-6/12 md:w-4/12 px-4">
-
             <MenuBtn
               open={dropdownPopoverShow}
               passRef={btnDropdownRef}
@@ -46,7 +45,7 @@ const Dropdown = ({pages}: Props) => {
                 "bg-th-secondary p-4 space-y-3 z-50 py-2 list-none mt-1 fade-in rounded border-2 border-th-primary"
               }
             >
-              {pages.map(({name, to}) => <NavLink key={name} name={name} to={to} />)}
+              {pages.map(({name, to, offseat}) => <NavLink key={name} name={name} to={to} offseat={offseat} />)}
             </nav>
         </div>
       </div>
