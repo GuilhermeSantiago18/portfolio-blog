@@ -14,7 +14,7 @@ export default function NavLink({ name, to, offseat }: Props) {
       {to.startsWith("/") ? (
         <Link href={to}>{name}</Link>
       ) : (
-        <ScrollLink smooth={true} to={to} offset={offseat} duration={1000}>
+        <ScrollLink smooth={true} to={to} offset={offseat} duration={1500}>
           <button>{name}</button>
         </ScrollLink>
       )}
