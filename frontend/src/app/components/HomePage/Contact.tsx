@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Contato: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <section className="bg-th-secondary text-th-primary py-8 mt-10">
       <div id="contactSection" className="container mx-auto px-4">
@@ -55,4 +55,4 @@ const Contato: React.FC = () => {
   );
 };
 
-export default Contato;
+export default Contact;
