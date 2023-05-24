@@ -26,7 +26,6 @@ const DarkModeBtn = () => {
 					}}>
 				<MoonIcon
 					className="h-6 w-6 cursor-pointer text-th-primary"
-				
 				/>
 				</button>
 			) : (
@@ -38,7 +37,6 @@ const DarkModeBtn = () => {
 					onClick={() => {
 						setTheme("dark")
 					}}
-
 				/>
 				</button>
 			)}
