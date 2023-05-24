@@ -13,4 +13,4 @@ export default function NavLink({name,to}: Props) {
     </Link>
   </li>
   )
-}
+} 
