@@ -1,11 +1,10 @@
-import AboutMe from './components/HomePage/AboutMe';
-import Depoiments from './components/HomePage/Depoiments';
+import { HomePage } from './components/HomePage';
+
 
 export default function Home() {
   return (
     <div>
-    <AboutMe />
-    <Depoiments />
+      <HomePage />
     </div>
   )
 }

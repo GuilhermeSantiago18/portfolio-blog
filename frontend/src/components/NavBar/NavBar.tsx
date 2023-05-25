@@ -2,29 +2,33 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import DarkModeBtn from "../DarkModeBtn";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import Spinner from "../Spinner";
 import NavMenu from './NavMenu';
 import Dropdown from './DropDown';
+import Spinner from '../Spinner';
+import DarkModeBtn from './DarkModeBtn';
 
 const pages = [
   {
     name: "Home",
     to: "/",
+    offseat: 0,
   },
   {
     name: "Blog",
     to: "/blog",
+    offseat: 0,
   },
   {
     name: "About",
     to: "aboutSection",
+    offseat: 0,
   },
   {
     name: "Contact",
     to: "contactSection",
+    offseat: 0
   },
 ]
 

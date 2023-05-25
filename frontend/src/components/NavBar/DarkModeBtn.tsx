@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { MoonIcon, SunIcon } from 'lucide-react'
-import Spinner from './Spinner'
+import Spinner from '../Spinner'
 
 const DarkModeBtn = () => {
 	const [mounted, setMounted] = useState(false)
