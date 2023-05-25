@@ -33,3 +33,11 @@ body {
 .fade-in {
   animation: fade-in 1.5s;
 }
+
+.animate-grow {
+  transition: transform 1s;
+}
+
+.animate-grow:hover {
+  transform: scale(1.2);
+}

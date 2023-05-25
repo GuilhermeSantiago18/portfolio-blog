@@ -34,7 +34,8 @@ const featuredPosts = [{
   title: 'Put all speaking her delicate recurred possible.',
   description: 'Set indulgence inquietude discretion insensible bed why announcing. Middleton fat two satisfied additions. So continued he or commanded household smallness delivered. Door poor on do walk in half. Roof his head the what.',
   image: '/mockblog.jpg'
-}]
+}
+]
 
 export default function Blog() {
   return (

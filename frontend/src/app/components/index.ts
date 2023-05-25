@@ -1,3 +1,4 @@
-export * from './CustomImage';
-export * from './Spinner';
-export * from './NavBar';
+export * from '../../components/CustomImage';
+export * from '../../components/Spinner';
+export * from '../../components/Contact';
+export * from '../../components/Footer';

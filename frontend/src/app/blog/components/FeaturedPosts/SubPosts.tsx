@@ -1,6 +1,6 @@
+import CustomImage from '@/components/CustomImage';
 import { PostType } from '../../types/Post';
 import Link from 'next/link';
-import CustomImage from '@/app/components/CustomImage';
 
 type Props ={
   post: PostType
