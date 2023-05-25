@@ -13,9 +13,9 @@ export default function StaticDepoiments() {
     <div className='box-content mt-4 mr-10' >
     <div className="grid grid-cols-2 gap-2 md:grid-cols-4 px-4">
       {depoiments.map((depoiment, index) => (
-        <div key={index} className="bg-th-primary p-4 rounded-lg">
-          <p className="text-lg font-bold mb-2">{depoiment.name}</p>
-          <p>{depoiment.message}</p>
+        <div key={index} className="bg-th-secondary p-4 rounded-lg">
+          <p className="text-lg text-th-background font-bold mb-2">{depoiment.name}</p>
+          <p className='text-th-background '>{depoiment.message}</p>
         </div>
       ))}
     </div>
