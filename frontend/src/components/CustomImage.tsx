@@ -9,7 +9,7 @@ type Props = {
 export default function CustomImage({src, alt, className}: Props){
   return(
   <article className={className}>
-    <Image fill alt={alt} src={src}  className="object-cover" />
+    <Image fill alt={alt} src={src} className="object-cover" />
   </article>
   )
 }
