@@ -7,16 +7,18 @@ import Contact from '../components/Contact';
 import { NavBar } from '@/components/NavBar';
 
 export const metadata = {
-  title: 'Dra. Potira Azevedo',
-}
+  title: 'Dra. Potira Azevedo'
+};
 
 export default function RootLayout({
   children,
 }: {
   children: ReactNode
 }) {
+
   return (
     <html suppressHydrationWarning lang="pt-BR">
+        <head />
         <body>
           <Providers>
             <NavBar />

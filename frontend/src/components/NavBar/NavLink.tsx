@@ -9,7 +9,7 @@ type Props = {
 
 export default function NavLink({ name, to, offseat }: Props) {
   return (
-    <li className="text-th-primary text-base md:text-xl font-bold md:font-medium">
+    <li className="text-th-background hover:text-th-primary text-base md:text-xl font-bold md:font-medium">
       {to.startsWith("/") ? (
         <Link href={to}>{name}</Link>
       ) : (
